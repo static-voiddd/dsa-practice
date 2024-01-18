@@ -34,6 +34,11 @@ public class DynamicStack extends CustomStack {
 
 	public static void main(String[] args) throws StackException {
 		DynamicStack stack = new DynamicStack();
+		
+		//CustomStack stack = new DynamicStack();
+		//OOP concept 
+		
+		
 		stack.push(10);
 		stack.push(20);
 		stack.push(1);

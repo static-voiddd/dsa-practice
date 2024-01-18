@@ -6,8 +6,6 @@ public class CustomStack {
 	private int pointer = -1;
 	private static final int DEFAULT_SIZE = 10;
 
-	
-	
 	public CustomStack() {
 		this(DEFAULT_SIZE);
 	}
