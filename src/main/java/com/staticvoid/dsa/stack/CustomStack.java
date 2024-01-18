@@ -2,9 +2,10 @@ package com.staticvoid.dsa.stack;
 
 public class CustomStack {
 	
-	private int[] data;
+	protected int[] data;
 	private int pointer = -1;
 	private static final int DEFAULT_SIZE = 10;
+
 	
 	
 	public CustomStack() {
@@ -22,6 +23,7 @@ public class CustomStack {
 		}
 		pointer++;
 		data[pointer] = item;
+		System.out.println("Pushed : " +  item);
 		return true;
 	}
 	
@@ -57,6 +59,14 @@ public class CustomStack {
 		stack.push(11);
 		stack.push(22);
 		stack.push(12);
+		stack.push(10);
+		stack.push(20);
+		stack.push(1);
+		stack.push(11);
+		
+		//stack is full after 10th push
+		stack.push(22);
+		stack.push(12);
 		
 		
 		System.out.println(stack.pop());
@@ -64,8 +74,13 @@ public class CustomStack {
 		System.out.println(stack.pop());
 		System.out.println(stack.pop());
 		System.out.println(stack.pop());
+		System.out.println(stack.pop());
+		System.out.println(stack.pop());
+		System.out.println(stack.pop());
+		System.out.println(stack.pop());
+		System.out.println(stack.pop());
 		
-		//Throws Exception
+		//Throws Exception after 10th pop
 		System.out.println(stack.pop());
 
 	}
