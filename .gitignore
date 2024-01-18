@@ -6,4 +6,4 @@ target/
 test-output/
 node_modules/**
 .orig
-.DS_Store
+**/.DS_Store
