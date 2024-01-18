@@ -22,28 +22,14 @@ public class CircularQueue {
 		queue.insert(99);
 		queue.insert(199); // full
 	}
-	
+
 	/*
-	 *  Inserted 3
-		3 -> END
-		Inserted 6
-		3 -> 6 -> END
-		Inserted 5
-		3 -> 6 -> 5 -> END
-		Inserted 19
-		3 -> 6 -> 5 -> 19 -> END
-		Inserted 1
-		3 -> 6 -> 5 -> 19 -> 1 -> END
-		3
-		6 -> 5 -> 19 -> 1 -> END
-		Inserted 133
-		6 -> 5 -> 19 -> 1 -> 133 -> END
-		6
-		5 -> 19 -> 1 -> 133 -> END
-		Inserted 99
-		5 -> 19 -> 1 -> 133 -> 99 -> END
-		Circular Q is full
-	 * */
+	 * Inserted 3 3 -> END Inserted 6 3 -> 6 -> END Inserted 5 3 -> 6 -> 5 -> END
+	 * Inserted 19 3 -> 6 -> 5 -> 19 -> END Inserted 1 3 -> 6 -> 5 -> 19 -> 1 -> END
+	 * 3 6 -> 5 -> 19 -> 1 -> END Inserted 133 6 -> 5 -> 19 -> 1 -> 133 -> END 6 5
+	 * -> 19 -> 1 -> 133 -> END Inserted 99 5 -> 19 -> 1 -> 133 -> 99 -> END
+	 * Circular Q is full
+	 */
 
 	protected int start;
 	protected int end;
@@ -72,6 +58,7 @@ public class CircularQueue {
 			i %= data.length;
 		} while (i != end);
 		System.out.println("END");
+		System.out.println("START " + start + " END " + end);
 
 	}
 
