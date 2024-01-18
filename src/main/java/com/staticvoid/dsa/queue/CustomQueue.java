@@ -3,30 +3,51 @@ package com.staticvoid.dsa.queue;
 import com.staticvoid.dsa.stack.StackException;
 
 public class CustomQueue {
-	
-	private int[] data;
+
 	private static final int DEFAULT_SIZE = 10;
-	int end = 0; 
-	
-	//Constructor
+
+	public static void main(String[] args) throws QueueException {
+		CustomQueue queue = new CustomQueue();
+		queue.insert(3);
+		queue.insert(9);
+		queue.insert(4);
+		queue.insert(9);
+		queue.insert(13);
+		queue.insert(19);
+		queue.insert(14);
+		queue.insert(29);
+		queue.insert(33);
+		queue.insert(39);
+
+		queue.remove();
+		queue.remove();
+		queue.remove();
+		queue.remove();
+		queue.remove();
+
+	}
+
+	private int[] data;
+
+	int end = 0;
+
+	// Constructor
 	public CustomQueue() {
 		this(DEFAULT_SIZE);
 	}
-	
+
 	public CustomQueue(int size) {
 		this.data = new int[size];
 	}
-	
-	public boolean isFull() {
-		return data.length-1 == end;
-		
+
+	public void display() {
+		for (int i = 0; i < end; i++) {
+			System.out.print(data[i] + " ");
+		}
+		System.out.println("END");
 	}
-	
-	public boolean isEmpty() {
-		return end == 0;
-	}
-	
-	//insert at the end
+
+	// insert at the end
 	// O(1)
 	public boolean insert(int item) {
 		if (isFull()) {
@@ -37,10 +58,25 @@ public class CustomQueue {
 		display();
 		return true;
 	}
-	
-	
+
+	public boolean isEmpty() {
+		return end == 0;
+	}
+
+	public boolean isFull() {
+		return data.length == end;
+
+	}
+
+	public int peek() throws StackException {
+		if (isEmpty()) {
+			throw new StackException("Queue is empty, cannt peek");
+		}
+		return data[end];
+	}
+
 	// remove from the head
-	// O(n) 
+	// O(n)
 	// 3 9 4 18 77 becomes
 	// 9 4 18 77 0
 	public int remove() throws QueueException {
@@ -48,43 +84,13 @@ public class CustomQueue {
 			throw new QueueException("Queue is empty, nothing to remove");
 		}
 		int removed = data[0];
-		for (int i=0; i< data.length-1; i++) {
-			data[i] = data[i+1];
+		for (int i = 0; i < data.length - 1; i++) {
+			data[i] = data[i + 1];
 		}
-		
+
 		end--;
 		display();
 		return removed;
-	}
-	
-	public int peek() throws StackException {
-		if (isEmpty()) {
-			throw new StackException ("Queue is empty, cannt peek");
-		}
-		return data[end];
-	}
-	
-	public void display() {
-		for (int i= 0; i < end; i++) {
-			System.out.print(data[i] + " ");
-		}
-		System.out.println("END");
-	}
-
-	public static void main(String[] args) throws QueueException {
-		// TODO Auto-generated method stub
-		CustomQueue queue = new CustomQueue();
-		queue.insert(3);
-		queue.insert(9);
-		queue.insert(4);
-		queue.insert(9);
-	
-		queue.remove();
-		queue.remove();
-		queue.remove();
-		queue.remove();
-		queue.remove();
-
 	}
 
 }
