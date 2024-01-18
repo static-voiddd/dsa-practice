@@ -1,17 +1,17 @@
-package com.staticvoid.dsa;
+package com.staticvoid.dsa.stack;
 
-public class StackCustom {
+public class CustomStack {
 	
 	private int[] data;
 	private int pointer = -1;
 	private static final int DEFAULT_SIZE = 10;
 	
 	
-	public StackCustom() {
+	public CustomStack() {
 		this(DEFAULT_SIZE);
 	}
 	
-	public StackCustom(int size) {
+	public CustomStack(int size) {
 		data = new int[size];
 	}
 	
@@ -50,7 +50,7 @@ public class StackCustom {
 
 	public static void main(String[] args) throws StackException {
 		// TODO Auto-generated method stub
-		StackCustom stack = new StackCustom();
+		CustomStack stack = new CustomStack();
 		stack.push(10);
 		stack.push(20);
 		stack.push(1);
@@ -58,9 +58,14 @@ public class StackCustom {
 		stack.push(22);
 		stack.push(12);
 		
+		
 		System.out.println(stack.pop());
 		System.out.println(stack.pop());
 		System.out.println(stack.pop());
+		System.out.println(stack.pop());
+		System.out.println(stack.pop());
+		
+		//Throws Exception
 		System.out.println(stack.pop());
 
 	}
