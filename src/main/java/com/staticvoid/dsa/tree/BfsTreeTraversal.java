@@ -37,16 +37,16 @@ public class BfsTreeTraversal {
 		customBinaryTree = new CustomTree();
 	}
 	
-	public List<List<Integer>> levelOrderTraversal(TreeNode root) {
+	public List<List<Integer>> levelOrderTraversal() {
 		System.out.println("Printing for BFS level order ");
 		
 		List<List<Integer>> levels = new ArrayList<>();
-		if (root == null) return levels;
+		if (customBinaryTree.rootNode == null) return levels;
 		
 		Queue<TreeNode> queue = new LinkedList<TreeNode>();
 		
 		//initially add the root element
-	    queue.offer(root);
+	    queue.offer(customBinaryTree.rootNode);
 		
 	    // root is level 0
 	    // this is needed because we have to add the list of node values to 
@@ -87,7 +87,7 @@ public class BfsTreeTraversal {
 
 	public static void main(String[] args) {
 		BfsTreeTraversal bfs = new BfsTreeTraversal();
-		System.out.println(bfs.levelOrderTraversal(bfs.customBinaryTree.node));
+		System.out.println(bfs.levelOrderTraversal());
 
 	}
 

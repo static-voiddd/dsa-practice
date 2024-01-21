@@ -21,14 +21,14 @@ public class DfsTreeTraversal {
 	public static void main(String[] args) {
 		DfsTreeTraversal dfs = new DfsTreeTraversal();
 
-		System.out.println(dfs.preOrderRecursive(dfs.tree.node));
-		System.out.println(dfs.preOrderIterative(dfs.tree.node));
+		System.out.println(dfs.preOrderRecursive(dfs.tree.rootNode));
+		System.out.println(dfs.preOrderIterative(dfs.tree.rootNode));
 
-		System.out.println(dfs.inOrderRecursive(dfs.tree.node));
-		System.out.println(dfs.inOrderIterative(dfs.tree.node));
+		System.out.println(dfs.inOrderRecursive(dfs.tree.rootNode));
+		System.out.println(dfs.inOrderIterative(dfs.tree.rootNode));
 
-		System.out.println(dfs.postOrderRecursive(dfs.tree.node));
-		System.out.println(dfs.postOrderIterative(dfs.tree.node));
+		System.out.println(dfs.postOrderRecursive(dfs.tree.rootNode));
+		System.out.println(dfs.postOrderIterative(dfs.tree.rootNode));
 
 	}
 

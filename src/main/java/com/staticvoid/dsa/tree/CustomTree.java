@@ -4,20 +4,20 @@ import java.util.Scanner;
 
 public class CustomTree {
 	
-	protected TreeNode node;
+	protected TreeNode rootNode;
 	
 	public CustomTree() {
-		node = new TreeNode(0);
-		node.left = new TreeNode(2);
-		node.right = new TreeNode(5);
-		node.left.left = new TreeNode(3);
-		node.left.right = new TreeNode(6);
-		node.right.left = new TreeNode(4);
-		node.right.left.left = new TreeNode(8);
-		node.right.right = new TreeNode(9);
-		node.right.right.right = new TreeNode(10);
-		node.left.left.left = new TreeNode(1);
-		node.left.left.right = new TreeNode(7);
+		rootNode = new TreeNode(0);
+		rootNode.left = new TreeNode(2);
+		rootNode.right = new TreeNode(5);
+		rootNode.left.left = new TreeNode(3);
+		rootNode.left.right = new TreeNode(6);
+		rootNode.right.left = new TreeNode(4);
+		rootNode.right.left.left = new TreeNode(8);
+		rootNode.right.right = new TreeNode(9);
+		rootNode.right.right.right = new TreeNode(10);
+		rootNode.left.left.left = new TreeNode(1);
+		rootNode.left.left.right = new TreeNode(7);
 	}
 
 	public static void main(String[] args) {
