@@ -70,15 +70,15 @@ public class InOrderTraversal implements DfsTraversal {
 
 		while (true) {
 			if (curr != null) {
-				stack.push(curr);
+				stack.push(curr); // first push left nodes till we meet null left node
 				curr = curr.left;
 			} else {
-				if (stack.isEmpty()) {
+				if (stack.isEmpty()) { // if stack empty we know we are done traversing
 					break;
 				}
-				curr = stack.pop();
-				list.add(curr.val);
-				curr = curr.right;
+				curr = stack.pop(); // start poping last left once we hit null
+				list.add(curr.val); // visit the poped node value
+				curr = curr.right; // now right node goes to stack
 			}
 		}
 
