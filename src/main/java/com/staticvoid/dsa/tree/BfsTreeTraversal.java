@@ -35,9 +35,7 @@ public class BfsTreeTraversal {
 	public static void main(String[] args) {
 		BfsTreeTraversal bfs = new BfsTreeTraversal();
 		System.out.println(bfs.levelOrderTraversal());
-
 	}
-
 
 	private CustomTree customBinaryTree;
 
@@ -68,14 +66,15 @@ public class BfsTreeTraversal {
 			int size = queue.size();
 			levels.add(new ArrayList<Integer>());
 
-			/** if we put 2 elements on queue before,
-			 we have to loop two times to go through their children
+			/**
+			 * if we put 2 elements on queue before, we have to loop two times to go through
+			 * their children hence for loop
 			 */
 
 			for (int i = 0; i< size; i++) {
-				// we just see the first element of queue, do not remove yet
-				TreeNode node = queue.peek();
-				//now we visit the node and add its value
+				// take out first node
+				TreeNode node = queue.poll();
+				// now we visit that node and add its value
 				levels.get(treeLevel).add(node.val);
 
 				// add the left child to queue
@@ -86,8 +85,6 @@ public class BfsTreeTraversal {
 				if (node.right != null) {
 					queue.offer(node.right);
 				}
-				// now remove the node from queue
-				queue.poll();
 			}
 			treeLevel++;
 		}

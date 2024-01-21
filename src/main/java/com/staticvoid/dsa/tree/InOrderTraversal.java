@@ -62,23 +62,25 @@ public class InOrderTraversal implements DfsTraversal {
 		System.out.println("Printing DFS Pre iterative");
 
 		List<Integer> list = new ArrayList<>();
+		if (tree.rootNode == null) {
+			return list;
+		}
 		Stack<TreeNode> stack = new Stack<>();
-
 		TreeNode curr = tree.rootNode;
 
-		while (curr != null) {
-			// put the root element
-			stack.push(curr);
-			if (curr.left != null) {
-				stack.push(curr.left);
+		while (true) {
+			if (curr != null) {
+				stack.push(curr);
 				curr = curr.left;
+			} else {
+				if (stack.isEmpty()) {
+					break;
+				}
+				curr = stack.pop();
+				list.add(curr.val);
+				curr = curr.right;
 			}
 		}
-
-		TreeNode removed = stack.pop();
-		list.add(removed.val);
-
-		curr = removed.right;
 
 		return list;
 	}

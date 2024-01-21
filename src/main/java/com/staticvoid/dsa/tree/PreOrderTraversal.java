@@ -39,7 +39,6 @@ public class PreOrderTraversal implements DfsTraversal {
 
 	@Override
 	public List<Integer> dfsRecursive(TreeNode node, List<Integer> list) {
-		System.out.println("Printing DFS Pre recursive");
 
 		if (node == null) {
 			return list;
@@ -88,6 +87,7 @@ public class PreOrderTraversal implements DfsTraversal {
 
 	@Override
 	public List<Integer> traverseTreeRecursive() {
+		System.out.println("Printing DFS Pre recursive");
 		//at first we pass our base root node and empty list
 		return dfsRecursive(tree.rootNode, new ArrayList<>());
 	}
