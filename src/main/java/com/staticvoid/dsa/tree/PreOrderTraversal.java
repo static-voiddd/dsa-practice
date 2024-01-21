@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
+import com.staticvoid.dsa.tree.CustomTree.TreeNode;
+
 /*-
           0
         /   \
@@ -27,8 +29,6 @@ public class PreOrderTraversal implements DfsTraversal {
 		PreOrderTraversal traversal = new PreOrderTraversal();
 		System.out.println(traversal.traverseTreeRecursive());
 		System.out.println(traversal.traverseTreeIterative());
-
-
 	}
 
 	private CustomTree tree;

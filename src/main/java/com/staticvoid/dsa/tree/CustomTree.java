@@ -3,9 +3,25 @@ package com.staticvoid.dsa.tree;
 import java.util.Scanner;
 
 public class CustomTree {
-	
+
+	public static class TreeNode {
+		protected int val;
+		protected TreeNode left;
+		protected TreeNode right;
+
+		public TreeNode(int val) {
+			this.val = val;
+		}
+	}
+
+	public static void main(String[] args) {
+		CustomTree tree = new CustomTree();
+		tree.insert(new Scanner(System.in));
+		tree.display();
+	}
+
 	protected TreeNode rootNode;
-	
+
 	public CustomTree() {
 		rootNode = new TreeNode(0);
 		rootNode.left = new TreeNode(2);
@@ -20,17 +36,9 @@ public class CustomTree {
 		rootNode.left.left.right = new TreeNode(7);
 	}
 
-	public static void main(String[] args) {
-		CustomTree tree = new CustomTree();
-		tree.insert(new Scanner(System.in));
-		tree.display();
-	}
-
-	private TreeNode root;
-
 
 	public void display() {
-		display(root, " ");
+		display(rootNode, " ");
 	}
 
 	private void display(TreeNode node, String indent) {
@@ -46,8 +54,8 @@ public class CustomTree {
 	public void insert(Scanner scanner) {
 		System.out.println("Enter the value for node ");
 		int value = scanner.nextInt();
-		root = new TreeNode(value);
-		populate(scanner, root);
+		rootNode = new TreeNode(value);
+		populate(scanner, rootNode);
 
 	}
 

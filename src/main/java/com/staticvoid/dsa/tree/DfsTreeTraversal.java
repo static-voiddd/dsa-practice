@@ -4,9 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
+import com.staticvoid.dsa.tree.CustomTree.TreeNode;
+
 /**
- * 
- * 
+ *
+ *
           0
         /   \
        2     5
@@ -105,7 +107,7 @@ public class DfsTreeTraversal {
 				stack.push(curr);
 				curr = curr.left;
 			} else {
-				
+
 			}
 		}
 
