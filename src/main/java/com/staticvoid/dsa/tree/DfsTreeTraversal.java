@@ -18,48 +18,24 @@ import java.util.Stack;
 
 public class DfsTreeTraversal {
 
-	public static class TreeNode {
-		private int val;
-		private TreeNode left;
-		private TreeNode right;
-
-		public TreeNode() {
-			this(0);
-		}
-
-		public TreeNode(int val) {
-			this.val = val;
-		}
-	}
-
 	public static void main(String[] args) {
-		DfsTreeTraversal tree = new DfsTreeTraversal();
+		DfsTreeTraversal dfs = new DfsTreeTraversal();
 
-		System.out.println(tree.preOrderRecursive(tree.node));
-		System.out.println(tree.preOrderIterative(tree.node));
+		System.out.println(dfs.preOrderRecursive(dfs.tree.node));
+		System.out.println(dfs.preOrderIterative(dfs.tree.node));
 
-		System.out.println(tree.inOrderRecursive(tree.node));
-		System.out.println(tree.inOrderIterative(tree.node));
+		System.out.println(dfs.inOrderRecursive(dfs.tree.node));
+		System.out.println(dfs.inOrderIterative(dfs.tree.node));
 
-		System.out.println(tree.postOrderRecursive(tree.node));
-		System.out.println(tree.postOrderIterative(tree.node));
+		System.out.println(dfs.postOrderRecursive(dfs.tree.node));
+		System.out.println(dfs.postOrderIterative(dfs.tree.node));
 
 	}
 
-	private TreeNode node;
+	private CustomTree tree;
 
 	public DfsTreeTraversal() {
-		node = new TreeNode();
-		node.left = new TreeNode(2);
-		node.right = new TreeNode(5);
-		node.left.left = new TreeNode(3);
-		node.left.right = new TreeNode(6);
-		node.right.left = new TreeNode(4);
-		node.right.left.left = new TreeNode(8);
-		node.right.right = new TreeNode(9);
-		node.right.right.right = new TreeNode(10);
-		node.left.left.left = new TreeNode(1);
-		node.left.left.right = new TreeNode(7);
+		tree = new CustomTree();
 	}
 
 	public List<Integer> inOrderDfsRecursive(TreeNode node, List<Integer> list) {

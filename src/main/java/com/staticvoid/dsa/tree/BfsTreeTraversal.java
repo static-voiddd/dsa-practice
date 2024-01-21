@@ -30,33 +30,15 @@ import java.util.Queue;
 
 public class BfsTreeTraversal {
 	
-	private TreeNode node;
+	private CustomTree customBinaryTree;
 	
-	private static class TreeNode {
-		private int val;
-		private TreeNode left;
-		private TreeNode right;
-		
-		public TreeNode(int val) {
-			this.val = val;
-		}
-	}
 	
 	public BfsTreeTraversal() {
-		node = new TreeNode(0);
-		node.left = new TreeNode(2);
-		node.right = new TreeNode(5);
-		node.left.left = new TreeNode(3);
-		node.left.right = new TreeNode(6);
-		node.right.left = new TreeNode(4);
-		node.right.left.left = new TreeNode(8);
-		node.right.right = new TreeNode(9);
-		node.right.right.right = new TreeNode(10);
-		node.left.left.left = new TreeNode(1);
-		node.left.left.right = new TreeNode(7);
+		customBinaryTree = new CustomTree();
 	}
 	
 	public List<List<Integer>> levelOrderTraversal(TreeNode root) {
+		System.out.println("Printing for BFS level order ");
 		
 		List<List<Integer>> levels = new ArrayList<>();
 		if (root == null) return levels;
@@ -105,7 +87,7 @@ public class BfsTreeTraversal {
 
 	public static void main(String[] args) {
 		BfsTreeTraversal bfs = new BfsTreeTraversal();
-		System.out.println(bfs.levelOrderTraversal(bfs.node));
+		System.out.println(bfs.levelOrderTraversal(bfs.customBinaryTree.node));
 
 	}
 
