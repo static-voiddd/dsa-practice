@@ -1,10 +1,8 @@
 package com.staticvoid.dsa.tree;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
 import java.util.Queue;
 
 import com.staticvoid.dsa.tree.CustomTree.TreeNode;
@@ -37,10 +35,9 @@ public class BfsTreeTraversal {
 	public static void main(String[] args) {
 		BfsTreeTraversal bfs = new BfsTreeTraversal();
 		System.out.println(bfs.levelOrderTraversal());
-		System.out.println(bfs.verticalOrderTraversal());
 	}
 
-	private CustomTree customBinaryTree;
+	protected CustomTree customBinaryTree;
 
 	public BfsTreeTraversal() {
 		customBinaryTree = new CustomTree();
@@ -95,55 +92,6 @@ public class BfsTreeTraversal {
 		return levels;
 	}
 
-	public List<List<Integer>> verticalOrderTraversal() {
-		System.out.println("Printing for BFS vertical order ");
-		List<List<Integer>> list = new ArrayList<>();
-		if (customBinaryTree.rootNode == null) {
-			return list;
-		}
 
-		// map storing column to the list of node values which lie on column value
-
-		Map<Integer, ArrayList<Integer>> map = new HashMap<>();
-
-		Map<TreeNode, Integer> nodeToColumn = new HashMap<>();
-
-		Queue<TreeNode> queue = new LinkedList<>();
-
-		queue.offer(customBinaryTree.rootNode);
-		nodeToColumn.put(customBinaryTree.rootNode, 0);
-		int minimumCol = 0;
-
-		while (!queue.isEmpty()) {
-			TreeNode removed = queue.poll();
-			int column = nodeToColumn.get(removed);
-
-			if (!map.containsKey(column)) {
-				map.put(column, new ArrayList<Integer>());
-			}
-
-			map.get(column).add(removed.val);
-
-			if (removed.left != null) {
-				queue.offer(removed.left);
-				nodeToColumn.put(removed.left, column - 1);
-			}
-
-			if (removed.right != null) {
-				queue.offer(removed.right);
-				nodeToColumn.put(removed.right, column + 1);
-			}
-
-			minimumCol = Math.min(minimumCol, column);
-		}
-
-		while (map.containsKey(minimumCol)) {
-			list.add(map.get(minimumCol++));
-		}
-
-		return list;
-
-
-	}
 
 }
