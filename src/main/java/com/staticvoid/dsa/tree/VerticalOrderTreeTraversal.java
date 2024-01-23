@@ -97,7 +97,7 @@ public class VerticalOrderTreeTraversal extends BfsTreeTraversal {
 
 		Queue<Tuple> queue = new LinkedList<>();
 
-		// add first node with 0, 0 x and y
+		// add first node with 0, 0 as x and y
 		queue.offer(new Tuple(0, 0, customBinaryTree.rootNode));
 
 		while (!queue.isEmpty()) {
