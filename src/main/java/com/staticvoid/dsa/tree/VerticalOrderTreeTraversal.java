@@ -128,7 +128,6 @@ public class VerticalOrderTreeTraversal extends BfsTreeTraversal {
 		}
 
 		// create the list
-
 		for (TreeMap<Integer, PriorityQueue<Integer>> combo : map.values()) {
 			// Create a sublist to store node values in each vertical.
 			list.add(new ArrayList<>());
