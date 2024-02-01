@@ -12,13 +12,17 @@ public class InsertionSort {
 
 	}
 
-	// 5 1 0 4 9 6
-	// 1 5 0 4 9 6
-	// i j replace i +1, curr = 0
-	// 1 0 5 4 9 6
-	// i j replace i+1
-	// 1 5 4 9 6 ends
-	// 0 1 5 4 9 6 0,1,5 is sorted now
+	/*-
+	 *
+	 5 1 0 4 9 6
+	 1 5 0 4 9 6
+	   i j replace i +1, curr = 0
+	 1 0 5 4 9 6
+	 i   j replace i+1
+	   1 5 4 9 6 ends
+	 0 1 5 4 9 6  0,1,5 is sorted now
+	 */
+
 
 	public int[] sortArray(int[] input) {
 
