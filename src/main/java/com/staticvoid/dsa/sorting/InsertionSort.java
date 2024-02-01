@@ -9,6 +9,7 @@ public class InsertionSort {
 	public static void main(String[] args) {
 		InsertionSort sort = new InsertionSort();
 		sort.sortArray(new int[] { 5, 1, 0, 4, 9, 6 });
+		sort.sortArray(new int[] { 5, 1, 1, 4, 9, 0 });
 
 	}
 
@@ -25,6 +26,8 @@ public class InsertionSort {
 
 
 	public int[] sortArray(int[] input) {
+
+		System.out.println("----");
 
 		for (int i : input) {
 			System.out.print(i + " ");
@@ -47,6 +50,8 @@ public class InsertionSort {
 		for (int i : input) {
 			System.out.print(i + " ");
 		}
+
+		System.out.println("");
 
 		return input;
 
