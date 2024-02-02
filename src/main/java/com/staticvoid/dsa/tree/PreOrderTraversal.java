@@ -23,19 +23,14 @@ import com.staticvoid.dsa.tree.CustomTree.TreeNode;
    Time complexity - O(n), we visit every node once
  */
 
-public class PreOrderTraversal implements DfsTraversal {
+public class PreOrderTraversal extends DfsTraversal {
 
 	public static void main(String[] args) {
-		PreOrderTraversal traversal = new PreOrderTraversal();
+		DfsTraversal traversal = new PreOrderTraversal();
 		System.out.println(traversal.traverseTreeRecursive());
 		System.out.println(traversal.traverseTreeIterative());
 	}
 
-	private CustomTree tree;
-
-	public PreOrderTraversal() {
-		tree = new CustomTree();
-	}
 
 	@Override
 	public List<Integer> dfsRecursive(TreeNode node, List<Integer> list) {
@@ -57,13 +52,13 @@ public class PreOrderTraversal implements DfsTraversal {
 	public List<Integer> traverseTreeIterative() {
 		System.out.println("Printing DFS Pre iterative");
 		List<Integer> list = new ArrayList<>();
-		if (tree.rootNode == null) {
+		if (getTree().rootNode == null) {
 			return list;
 		}
 		Stack<TreeNode> stack = new Stack<>();
 
 		//push the root node
-		stack.push(tree.rootNode);
+		stack.push(getTree().rootNode);
 
 		while (!stack.isEmpty()) {
 			TreeNode removedNode = stack.pop();
@@ -89,7 +84,7 @@ public class PreOrderTraversal implements DfsTraversal {
 	public List<Integer> traverseTreeRecursive() {
 		System.out.println("Printing DFS Pre recursive");
 		//at first we pass our base root node and empty list
-		return dfsRecursive(tree.rootNode, new ArrayList<>());
+		return dfsRecursive(getTree().rootNode, new ArrayList<>());
 	}
 
 }

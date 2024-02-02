@@ -26,22 +26,18 @@ Space complexity - O(h), h is height of tree, worst case O(n)
 Time complexity - O(n), we visit every node once
  */
 
-public class InOrderTraversal implements DfsTraversal {
+public class InOrderTraversal extends DfsTraversal {
 
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		InOrderTraversal traversal = new InOrderTraversal();
+		DfsTraversal traversal = new InOrderTraversal();
 		System.out.println(traversal.traverseTreeRecursive());
 		System.out.println(traversal.traverseTreeIterative());
 	}
 
-	private CustomTree tree;
 
-	public InOrderTraversal() {
-		tree = new CustomTree();
-	}
 
 	@Override
 	public List<Integer> dfsRecursive(TreeNode node, List<Integer> list) {
@@ -62,11 +58,11 @@ public class InOrderTraversal implements DfsTraversal {
 		System.out.println("Printing DFS Pre iterative");
 
 		List<Integer> list = new ArrayList<>();
-		if (tree.rootNode == null) {
+		if (getTree().rootNode == null) {
 			return list;
 		}
 		Stack<TreeNode> stack = new Stack<>();
-		TreeNode curr = tree.rootNode;
+		TreeNode curr = getTree().rootNode;
 
 		while (true) {
 			if (curr != null) {
@@ -88,7 +84,7 @@ public class InOrderTraversal implements DfsTraversal {
 	@Override
 	public List<Integer> traverseTreeRecursive() {
 		System.out.println("Printing DFS Pre recursive");
-		return dfsRecursive(tree.rootNode, new ArrayList<>());
+		return dfsRecursive(getTree().rootNode, new ArrayList<>());
 	}
 
 }

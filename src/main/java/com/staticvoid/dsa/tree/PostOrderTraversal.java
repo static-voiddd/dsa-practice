@@ -22,7 +22,7 @@ Post DFS visit - 1 7 3 6 2 8 4 10 9 5 0
 
 import com.staticvoid.dsa.tree.CustomTree.TreeNode;
 
-public class PostOrderTraversal implements DfsTraversal {
+public class PostOrderTraversal extends DfsTraversal {
 
 	/**
 	 * @param args
@@ -34,11 +34,6 @@ public class PostOrderTraversal implements DfsTraversal {
 		System.out.println(traversal.traverseTreeIterative());
 	}
 
-	private CustomTree tree;
-
-	public PostOrderTraversal() {
-		tree = new CustomTree();
-	}
 
 	@Override
 	public List<Integer> dfsRecursive(TreeNode node, List<Integer> list) {
@@ -58,11 +53,11 @@ public class PostOrderTraversal implements DfsTraversal {
 		System.out.println("Printing DFS Post iterative one stack");
 		List<Integer> list = new ArrayList<>();
 
-		if (tree.rootNode == null) {
+		if (getTree().rootNode == null) {
 			return list;
 		}
 		Stack<TreeNode> stack = new Stack<>();
-		TreeNode curr = tree.rootNode;
+		TreeNode curr = getTree().rootNode;
 
 		while (curr != null || !stack.isEmpty()) {
 			if (curr != null) {
@@ -93,13 +88,13 @@ public class PostOrderTraversal implements DfsTraversal {
 		System.out.println("Printing DFS Post iterative two stacks");
 		List<Integer> list = new ArrayList<>();
 
-		if (tree.rootNode == null) {
+		if (getTree().rootNode == null) {
 			return list;
 		}
 		Stack<TreeNode> stack1 = new Stack<>();
 		Stack<TreeNode> stack2 = new Stack<>();
 
-		TreeNode curr = tree.rootNode;
+		TreeNode curr = getTree().rootNode;
 		stack1.push(curr);
 
 		while (!stack1.isEmpty()) {
@@ -125,7 +120,7 @@ public class PostOrderTraversal implements DfsTraversal {
 	@Override
 	public List<Integer> traverseTreeRecursive() {
 		System.out.println("Printing DFS Post recursive");
-		return dfsRecursive(tree.rootNode, new ArrayList<>());
+		return dfsRecursive(getTree().rootNode, new ArrayList<>());
 	}
 
 }

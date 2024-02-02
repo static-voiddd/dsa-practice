@@ -4,12 +4,26 @@ import java.util.List;
 
 import com.staticvoid.dsa.tree.CustomTree.TreeNode;
 
-public interface DfsTraversal {
+public abstract class DfsTraversal {
 
-	public List<Integer> dfsRecursive(TreeNode node, List<Integer> list);
+	private CustomTree tree;
 
-	public List<Integer> traverseTreeIterative();
+	DfsTraversal() {
+		tree = new CustomTree();
+	}
 
-	public List<Integer> traverseTreeRecursive();
+	public abstract List<Integer> dfsRecursive(TreeNode node, List<Integer> list);
+
+	public CustomTree getTree() {
+		return tree;
+	}
+
+	public void setTree(CustomTree tree) {
+		this.tree = tree;
+	}
+
+	public abstract List<Integer> traverseTreeIterative();
+
+	public abstract List<Integer> traverseTreeRecursive();
 
 }
