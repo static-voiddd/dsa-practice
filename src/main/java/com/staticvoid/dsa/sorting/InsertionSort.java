@@ -9,6 +9,9 @@ public class InsertionSort extends Sorting {
 	public static void main(String[] args) {
 		Sorting sort = new InsertionSort();
 		sort.sort();
+
+		System.out.println(6789 % 10);
+		System.out.println(6789 / 10);
 	}
 
 

@@ -3,6 +3,17 @@ package com.staticvoid.dsa.tree;
 import java.util.Arrays;
 import java.util.List;
 
+/*-
+          0
+        /   \
+       2     5
+      / \   / \
+     3   6 4   9
+    / \   /     \
+   1   7 8       10
+
+ */
+
 public class CustomTree {
 
 	public static class TreeNode {
@@ -35,7 +46,21 @@ public class CustomTree {
 		printTree();
 	}
 
+	private int heightOfTree(TreeNode node) {
+		if (node == null) {
+			return 0;
+		}
+
+		int leftHeight = heightOfTree(node.left);
+		int rightHeight = heightOfTree(node.right);
+
+		return 1 + leftHeight > rightHeight ? leftHeight : rightHeight;
+
+	}
+
 	private void printTree() {
+
+		System.out.println("Height of tree " + heightOfTree(rootNode));
 		System.out.print("Original - ");
 
 		for (int value : values) {
