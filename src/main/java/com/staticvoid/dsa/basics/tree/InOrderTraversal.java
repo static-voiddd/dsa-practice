@@ -1,13 +1,13 @@
 /**
  *
  */
-package com.staticvoid.dsa.tree;
+package com.staticvoid.dsa.basics.tree;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-import com.staticvoid.dsa.tree.CustomTree.TreeNode;
+import com.staticvoid.dsa.basics.tree.CustomTree.TreeNode;
 
 /*-
           0

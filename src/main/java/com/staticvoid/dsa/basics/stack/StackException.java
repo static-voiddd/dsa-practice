@@ -1,4 +1,4 @@
-package com.staticvoid.dsa.stack;
+package com.staticvoid.dsa.basics.stack;
 
 public class StackException extends Exception {
 	

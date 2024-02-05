@@ -1,4 +1,4 @@
-package com.staticvoid.dsa.tree;
+package com.staticvoid.dsa.basics.tree;
 
 import java.util.Arrays;
 import java.util.List;

@@ -1,6 +1,6 @@
-package com.staticvoid.dsa.queue;
+package com.staticvoid.dsa.basics.queue;
 
-import com.staticvoid.dsa.stack.StackException;
+import com.staticvoid.dsa.basics.stack.StackException;
 
 public class CustomQueue {
 

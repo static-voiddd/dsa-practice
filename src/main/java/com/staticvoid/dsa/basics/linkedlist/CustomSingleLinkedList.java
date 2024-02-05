@@ -1,4 +1,4 @@
-package com.staticvoid.dsa.linkedlist;
+package com.staticvoid.dsa.basics.linkedlist;
 
 public class CustomSingleLinkedList {
 

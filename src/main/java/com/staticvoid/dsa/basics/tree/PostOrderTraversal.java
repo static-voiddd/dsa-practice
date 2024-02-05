@@ -1,26 +1,10 @@
-package com.staticvoid.dsa.tree;
+package com.staticvoid.dsa.basics.tree;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-/**
-          0
-        /   \
-       2     5
-      / \   / \
-     3   6 4   9
-    / \   /     \
-   1   7 8       10
-
-Post DFS visit - 1 7 3 6 2 8 4 10 9 5 0
- */
-
-//Time taken depends on number of nodes, complexity is O(n)
-
-//Space complexity O(n)
-
-import com.staticvoid.dsa.tree.CustomTree.TreeNode;
+import com.staticvoid.dsa.basics.tree.CustomTree.TreeNode;
 
 public class PostOrderTraversal extends DfsTraversal {
 

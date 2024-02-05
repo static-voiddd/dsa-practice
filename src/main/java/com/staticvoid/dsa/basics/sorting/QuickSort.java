@@ -1,4 +1,4 @@
-package com.staticvoid.dsa.sorting;
+package com.staticvoid.dsa.basics.sorting;
 
 public class QuickSort extends Sorting {
 

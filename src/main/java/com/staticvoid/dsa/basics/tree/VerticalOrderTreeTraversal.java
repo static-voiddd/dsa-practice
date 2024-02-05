@@ -1,4 +1,4 @@
-package com.staticvoid.dsa.tree;
+package com.staticvoid.dsa.basics.tree;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -9,7 +9,7 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.TreeMap;
 
-import com.staticvoid.dsa.tree.CustomTree.TreeNode;
+import com.staticvoid.dsa.basics.tree.CustomTree.TreeNode;
 
 public class VerticalOrderTreeTraversal extends BfsTreeTraversal {
 

@@ -1,4 +1,4 @@
-package com.staticvoid.dsa.sorting;
+package com.staticvoid.dsa.basics.sorting;
 
 /**
  * Time Complexity is O(n^2), space complexity is O(1)

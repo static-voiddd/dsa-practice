@@ -1,4 +1,4 @@
-package com.staticvoid.dsa.queue;
+package com.staticvoid.dsa.basics.queue;
 
 import java.util.Stack;
 

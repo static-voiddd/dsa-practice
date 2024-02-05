@@ -1,4 +1,4 @@
-package com.staticvoid.dsa.stack;
+package com.staticvoid.dsa.basics.stack;
 
 
 // Stack that is never full unlike CustomStack which had size restriction
