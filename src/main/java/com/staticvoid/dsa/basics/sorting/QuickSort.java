@@ -1,10 +1,16 @@
 package com.staticvoid.dsa.basics.sorting;
 
+/**
+ * Time Complexity is O(nlogn), space complexity is O(1)
+ */
 public class QuickSort extends Sorting {
 
 	public static void main(String[] args) {
-		Sorting sort = new QuickSort();
-		sort.sort();
+		new QuickSort();
+	}
+
+	QuickSort() {
+		sort();
 	}
 
 	public int partition(int nums[], int left, int right) {
