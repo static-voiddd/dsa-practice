@@ -1,7 +1,10 @@
 package com.staticvoid.dsa.basics.sorting;
 
 /**
- * Find minimum and swap with current, start with first index Time Complexity is
+ * Find minimum and swap with current, 
+ * 
+ * start with first index 
+ * Time Complexity is
  * O(n^2), space complexity is O(1)
  */
 public class SelectionSort extends Sorting {

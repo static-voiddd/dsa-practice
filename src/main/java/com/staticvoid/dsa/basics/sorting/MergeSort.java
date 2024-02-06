@@ -10,21 +10,20 @@ package com.staticvoid.dsa.basics.sorting;
  * we start sorting from left
  */
 
-public class InsertionSort extends Sorting {
+public class MergeSort extends Sorting {
 
 	public static void main(String[] args) {
-		Sorting sort = new InsertionSort();
+		new MergeSort();
 	}
 
-	private InsertionSort() {
-
+	MergeSort() {
 		sort();
 	}
 
 
 	@Override
 	public void sortArray(int[] input) {
-		System.out.println("Insertion Sort - ");
+		System.out.println("Merge Sort - ");
 
 		printArray(input, false);
 

@@ -5,7 +5,7 @@ package com.staticvoid.dsa.basics.sorting;
  * complexity is O(1)
  *
  * We can optimize to make it slightly better if we have sorted array/ elements
- * if all sorted it can be O(n)
+ * if all sorted it can be O(n) which is best time complexity
  *
  */
 
@@ -24,7 +24,7 @@ public class BubbleSort extends Sorting {
 
 		printArray(input, false);
 
-		for (int i = input.length - 1; i >= 0; i--) {
+		for (int i = input.length - 1; i >= 1; i--) {
 			boolean swapHappened = false;
 			for (int j = 0; j <= i - 1; j++) {
 				if (input[j] > input[j + 1]) {
