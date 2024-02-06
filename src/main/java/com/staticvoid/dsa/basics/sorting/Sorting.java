@@ -6,12 +6,14 @@ public abstract class Sorting {
 	private int[] originalArray2;
 	private int[] originalArray3;
 	private int[] originalArray4;
+	private int[] originalArray5;
 
 	Sorting() {
 		originalArray1 = new int[] { 5, 1, 0, 4, 9, 6 };
 		originalArray2 = new int[] { 5, 1, 1, 4, 9, 0 };
 		originalArray3 = new int[] { 5, -1, 2, 4, -3, 1 };
 		originalArray4 = new int[] { 5, 10, 100, -4, -9, 0 };
+		originalArray5 = new int[] { 5, 10, 15, 40, 90, 100 };
 	}
 
 	public void printArray(int[] input, boolean afterSort) {
@@ -35,6 +37,7 @@ public abstract class Sorting {
 		sortArray(originalArray3);
 
 		sortArray(originalArray4);
+		sortArray(originalArray5);
 
 	}
 
