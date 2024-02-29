@@ -108,7 +108,8 @@ public class KClosestPointsToOrigin {
 			return;
 		}
 		int randIdx = (hi - lo) / 2;
-		// place the key to the beginning
+		// consider the mid as our pivot
+
 		swap(points, lo, randIdx);
 		int key = lo;
 		int i = lo, j = hi + 1; // one index offset

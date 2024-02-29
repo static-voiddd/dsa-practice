@@ -32,7 +32,6 @@ public class LeftRotateArrayByK {
 
 		LeftRotateArrayByK.printArray(nums, k, true);
 
-
 		return nums;
 	}
 
