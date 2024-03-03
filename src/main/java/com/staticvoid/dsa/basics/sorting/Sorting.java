@@ -8,7 +8,7 @@ public abstract class Sorting {
 	private int[] originalArray4;
 	private int[] originalArray5;
 
-	Sorting() {
+	protected Sorting() {
 		originalArray1 = new int[] { 5, 1, 0, 4, 9, 6 };
 		originalArray2 = new int[] { 5, 1, 1, 4, 9, 0 };
 		originalArray3 = new int[] { 5, -1, 2, 4, -3, 1 };
